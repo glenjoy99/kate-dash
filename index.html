@@ -22,9 +22,9 @@
       <h1>The Dashboard</h1>
       <p>All the information you need to start your day!</p>
       <div class="btn-group" role="group" aria-label="...">
-        <button type="button" class="btn btn-default">Blackboard</button>
-        <button type="button" class="btn btn-default">McDaniel</button>
-        <button type="button" class="btn btn-default">Drive</button>
+        <button onclick="blackboard()" type="button" class="btn btn-default">Blackboard</button>
+        <button onclick="mcdaniel()" type="button" class="btn btn-default">McDaniel</button>
+        <button onclick="drive()" type="button" class="btn btn-default">Drive</button>
       </div>
     </div>
   </div>
@@ -89,18 +89,6 @@
       </div>
     </div>
 
-
-    <div class="float-child">
-      <div class="Calendar">
-        <div class="page-header"><img src="./assets/icons8-calendar.gif" height="100" width="100" align="left"/><h2>Calendar</h2></div>
-        <div class="data">
-          
-        </div>
-      </div>
-
-    </div>
-
-
     <div class="float-child">
       <div class="covid">
         <div class="page-header"><img src="./assets/icons8-coronavirus.gif" height="100" width="100" align="left"/><h2>COVID-19  <span class="label label-danger">LIVE</span></h2></div>
@@ -109,11 +97,21 @@
     
         <div class="cases">
           <img src="./assets/loading.gif" height="100"  width="100">
-    
         </div>
       </div>
-
     </div>
+
+    <div class="float-child">
+      <div class="Calendar">
+        <div class="page-header"><img src="./assets/icons8-calendar.gif" height="100" width="100" align="left"/><h2>Calendar</h2></div>
+        <div class="data">
+          
+        </div>
+      </div>
+    </div>
+
+
+    
 
     
 

@@ -27,7 +27,7 @@
 
 .date {
     position:relative;
-    padding-left: 100px;
+    padding-left: 50px;
     padding-bottom: 50px;
     width:500px;
 }
@@ -41,7 +41,7 @@
 .float-child {
     width: 50%;
     float: left;
-    padding: 20px;
+    padding: 5px;
 } 
 
 .title {

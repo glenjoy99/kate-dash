@@ -108,6 +108,26 @@ function search(){
     return false;
 }
 
+function blackboard() {
+    window.open(
+        "https://bb.mcdaniel.edu/webapps/login/#");
+
+    return false;
+}
+
+function mcdaniel() {
+    window.open(
+        "https://webapps.mcdaniel.edu/login/");
+
+    return false;
+}
+
+function drive() {
+    window.open(
+        "https://drive.google.com");
+
+    return false;
+}
 
 
 
