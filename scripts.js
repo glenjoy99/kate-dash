@@ -85,18 +85,21 @@ async function displayDateAndTime() {
     var currentdate = new Date(); 
     var datetime = (currentdate.getMonth()+1) + "/"
                 + currentdate.getDate()  + "/" 
-                + currentdate.getFullYear() + " @ "  
-                + currentdate.getHours() % 12 + ":"  
-                + (currentdate.getMinutes() < 10 ? "0" + currentdate.getMinutes() : currentdate.getMinutes());
+                + currentdate.getFullYear();
 
-    let htmlSegment = `<div class="date">
-                            <p>${datetime} </p>
-                        </div>`;
+    let htmlSegment = `<p>
+    Today is ${datetime} </p>`;
 
-    let container = document.querySelector('div.Calendar');
+    let container = document.querySelector('div.title-date');
     container.innerHTML += htmlSegment;
           
 }
+
+
+
+
+
+
 
 function search(){
 
@@ -135,5 +138,4 @@ document.addEventListener('DOMContentLoaded', function() {
     renderTemperature();
     renderCOVIDStatus();
     displayDateAndTime();
-    //getVerse();
 }, false);

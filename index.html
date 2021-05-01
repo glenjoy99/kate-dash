@@ -7,6 +7,7 @@
   <title> Dashboard</title>
   <meta name="description" content="The Kate Dashboard">
   <meta name="author" content="Glen Joy">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" href="./style.css">
   <script src="scripts.js"></script>
@@ -21,20 +22,23 @@
     <div class="title">
       <h1>The Dashboard</h1>
       <p>All the information you need to start your day!</p>
+      <div class="title-date">
+
+      </div>
       <div class="btn-group" role="group" aria-label="...">
-        <button onclick="blackboard()" type="button" class="btn btn-default">Blackboard</button>
-        <button onclick="mcdaniel()" type="button" class="btn btn-default">McDaniel</button>
-        <button onclick="drive()" type="button" class="btn btn-default">Drive</button>
+        <button onclick="blackboard()" type="button" class="btn btn-default">Blackboard
+          <span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>
+        </button>
+        <button onclick="mcdaniel()" type="button" class="btn btn-default">McDaniel
+          <span class="glyphicon glyphicon-education" aria-hidden="true"></span>
+        </button>
+        <button onclick="drive()" type="button" class="btn btn-default">Drive
+          <span class="glyphicon glyphicon-cloud" aria-hidden="true"></span>
+        </button>
       </div>
     </div>
   </div>
 
-
-  <!-- <form onsubmit="event.preventDefault();" role="search">
-    <label for="search">Search for stuff</label>
-    <input id="search" type="search" placeholder="Search..." autofocus required />
-    <button type="submit">Go</button>    
-  </form> -->
 
   
   <form action="javascript:search();"  class="search-bar">
@@ -48,14 +52,10 @@
   </form>
 
   <div class="float-container">
+    
     <div class="float-child">
       <div class="temp">
         <div class="page-header"><img src="./assets/icons8-sun.gif" height="100" width="100"  align="left"/><h2>Weather</h2></div>
-        <!-- <div class="header">
-          <h2>Weather</h2>
-          <img src=/>
-        </div> -->
-    
         <div class="selector">
           <label for="citytype">Select city:</label>
     
@@ -102,20 +102,13 @@
     </div>
 
     <div class="float-child">
-      <div class="Calendar">
-        <div class="page-header"><img src="./assets/icons8-calendar.gif" height="100" width="100" align="left"/><h2>Calendar</h2></div>
+      <div class="Buzzfeed">
+        <div class="page-header"><img src="./assets/icons8-calendar.gif" height="100" width="100" align="left"/><h2>Buzzfeed</h2></div>
         <div class="data">
           
         </div>
       </div>
     </div>
-
-
-    
-
-    
-
-
 
   </div>
 
