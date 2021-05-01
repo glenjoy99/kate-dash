@@ -95,7 +95,76 @@ async function displayDateAndTime() {
           
 }
 
+async function renderBuzzfeedData() {
+    const options = {
+        method: 'GET',
+        mode: 'no-cors'
+      };
+    var stat = await fetch('https://kate-dash.herokuapp.com/buzz');
+    var text = await stat.text();
+    console.log(text);
+    const obj = JSON.parse(text);
+    
+    var buzzroot = "https://www.buzzfeed.com";
+    var last = obj.buzzes.length - 1;
 
+    var title = obj.buzzes[last].title;
+    var img = obj.buzzes[last].images.standard;
+    var desc = obj.buzzes[last].description;
+    var link = buzzroot + obj.buzzes[last].canonical_path;
+
+    var title1 = obj.buzzes[last-1].title;
+    var img1 = obj.buzzes[last-1].images.standard;
+    var desc1 = obj.buzzes[last-1].description;
+    var link1 = buzzroot + obj.buzzes[last-1].canonical_path;
+
+    var title2 = obj.buzzes[last-2].title;
+    var img2 = obj.buzzes[last-2].images.standard;
+    var desc2 = obj.buzzes[last-2].description;
+    var link2 = buzzroot + obj.buzzes[last-2].canonical_path;
+
+    let htmlSegment = `<li class="media"> 
+                        <div class="media-left">
+                            <a href="${link}">
+                                <img class="media-object" src="${img}" alt="...">
+                            </a> 
+                        </div>
+                        <div class="media-body">
+                            <h4 class="media-heading">${title}</h4><p>${desc} </p>
+                            
+                        </div>
+                        </li>` ;
+
+    let htmlSegment2 = `<li class="media"> 
+                            <div class="media-left">
+                                <a href="${link1}">
+                                    <img class="media-object" src="${img1}" alt="...">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">${title1}</h4><p>${desc1} </p>
+                            </div>
+                        </li>`
+    
+    let htmlSegment3 = `<li class="media"> 
+                            <div class="media-left">
+                                <a href="${link2}">
+                                    <img class="media-object" src="${img2}" alt="...">
+                                </a>
+                            </div>
+                            <div class="media-body">
+                                <h4 class="media-heading">${title2}</h4><p>${desc2} </p>
+                            </div>
+                        </li>`
+
+    let container = document.querySelector('ul.media-list');
+    container.innerHTML += htmlSegment;
+    container.innerHTML += htmlSegment2;
+    container.innerHTML += htmlSegment3;
+
+    
+
+}
 
 
 
@@ -138,4 +207,5 @@ document.addEventListener('DOMContentLoaded', function() {
     renderTemperature();
     renderCOVIDStatus();
     displayDateAndTime();
+    renderBuzzfeedData()
 }, false);
