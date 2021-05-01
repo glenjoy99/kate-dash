@@ -68,6 +68,22 @@ async function renderCOVIDStatus() {
 
     console.log(matches);
 
+    let groupSegment = `<li class="list-group-item">
+                            <span class="badge">${matches[0][1]}</span>
+                            CONFIRMED CASES PAST WEEK
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">${matches[1][1]}</span>
+                            TOTAL CASES
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">${matches[2][1]}</span>
+                            ADMINISTERED TESTS
+                        </li>
+                        <li class="list-group-item">
+                            <span class="badge">${(matches[1][1]/matches[2][1]).toFixed(2)}</span>
+                            POSITIVITY RATE
+                        </li>`;
     
 
     let htmlSegment = `<div class="confirmed">
@@ -77,8 +93,8 @@ async function renderCOVIDStatus() {
                             <p>${(matches[1][1]/matches[2][1]).toFixed(2)} % positivity rate </p>
                         </div>`;
 
-    let container = document.querySelector('div.cases');
-    container.innerHTML = htmlSegment;
+    let container = document.querySelector('ul.list-group');
+    container.innerHTML = groupSegment;
 }   
 
 async function displayDateAndTime() {

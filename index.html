@@ -40,16 +40,17 @@
   </div>
 
 
-  
-  <form action="javascript:search();"  class="search-bar">
-    <div class="google">
-      <img src="assets/google-logo.png" width="45" height="45">
-    </div>
-    <input type="search" name="search" id="input-search" pattern=".*\S.*" required>
-    <button class="search-btn" type="submit">
-      <span>Search</span>
-    </button>
-  </form>
+
+      <form action="javascript:search();"  class="search-bar">
+        <div class="google">
+          <img src="assets/google-logo.png" width="45" height="45">
+        </div>
+        <input type="search" name="search" id="input-search" pattern=".*\S.*" required>
+        <button class="search-btn" type="submit">
+          <span>Search</span>
+        </button>
+      </form>
+
 
   <div class="float-container">
     
@@ -91,13 +92,21 @@
 
     <div class="float-child">
       <div class="covid">
-        <div class="page-header"><img src="./assets/icons8-coronavirus.gif" height="100" width="100" align="left"/><h2>COVID-19  <span class="label label-danger">LIVE</span></h2></div>
-        <!-- <h2>COVID-19</h2> -->
-        <p> Latest COVID-19 status from McDaniel</p>
-    
-        <div class="cases">
-          <img src="./assets/loading.gif" height="100"  width="100">
-        </div>
+        <div class="page-header"><h2><span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span> COVID-19  <span class="label label-danger">LIVE</span></h2></div>
+        <!-- <h2>COVID-19</h2> -->    
+        <div class="panel panel-danger">
+          <!-- Default panel contents -->
+          <div class="panel-heading">Latest Status from McDaniel</div>
+            <div class="panel-body">
+              <p>Data is scraped from official Dashboard and updated with every refresh</p>
+            </div>
+
+            <ul class="list-group">
+              <img src="./assets/loading.gif" height="100"  width="100">
+            </ul>
+          </div>
+
+
       </div>
     </div>
 
