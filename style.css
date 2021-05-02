@@ -4,6 +4,10 @@
     
 } */
 
+* {
+	margin:0;
+}
+
 .page-header {
     padding-right: 50px;
 }
@@ -32,11 +36,15 @@
     width:500px;
 }
 
+.btn-group {
+	min-height: 345px;
+}
+
 
 .float-container {
     border: 3px solid #fff;
     padding: 200px;
-	padding-top: 50px;
+	padding-top: 100px;
 	/* padding-bottom:400px; */
 }
 
@@ -53,6 +61,15 @@
 }
 
 
+.formArea {
+	background: #C9D6FF;  /* fallback for old browsers */
+	background: -webkit-linear-gradient(to right, #E2E2E2, #C9D6FF);  /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to right, #E2E2E2, #C9D6FF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+	margin:0;
+	float:left;
+	clear:none;
+
+}
 
 
 .jumbotron {

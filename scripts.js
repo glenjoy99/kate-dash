@@ -91,7 +91,7 @@ async function displayDateAndTime() {
                 + currentdate.getFullYear();
 
     let htmlSegment = `<p>
-    Today is ${datetime} </p>`;
+    Today is <strong>${datetime}</strong></p>`;
 
     let container = document.querySelector('div.title-date');
     container.innerHTML += htmlSegment;
