@@ -106,7 +106,9 @@ input {
 	width:400px;
 }
 
-
+.media-object:hover{
+	transform: scale(1.08);
+}
 
 /* body {
 	background: #f1f1f1;

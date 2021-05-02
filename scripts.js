@@ -22,19 +22,6 @@ async function getCurrentTemperature() {
         }
 }
 
-async function getTopNews() {
-    var key = 'E6WYCVDCHvwtOBuexQuKJWePGc0jPei-486_MuGUYf9biFRd';
-    var url = 'https://api.currentsapi.services/v1/latest-news?' +
-    'language=us&' +
-    'apiKey=E6WYCVDCHvwtOBuexQuKJWePGc0jPei-486_MuGUYf9biFRd';
-    try {
-        let response =  await fetch(url);
-        return  await response.json();
-    } catch (error) {
-        console.log(error)
-    }
-
-}
 
 async function renderTemperature() {
     var tempdata =  await getCurrentTemperature();
