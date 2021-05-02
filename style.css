@@ -71,13 +71,13 @@
       right: 0px;
       bottom: 0px;
       left: 0px;
-      opacity: 0.85;
+      opacity: 0.50;
 	
 }
 
 .title {
 	position: relative;
-  color: #ffffff;  
+  color: #252424;  
   font-size: 14rem;
   line-height: 0.9;
   text-align: left;
