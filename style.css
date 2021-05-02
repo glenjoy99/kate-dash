@@ -51,14 +51,43 @@
     margin: 0 auto;
 }
 
-.us{
-    padding-left: 200px;
+
+
+.jumbotron {
+    position: relative; 
+    align-items: center;
+    justify-content: center;
+	
+	
+} 
+
+.jumbotron::before {
+	content: "";
+	background-image: url("https://source.unsplash.com/random/1920x1080");
+	background-color: white;
+	background-size: cover;
+      position: absolute;
+      top: 0px;
+      right: 0px;
+      bottom: 0px;
+      left: 0px;
+      opacity: 0.85;
+	
 }
 
- .jumbotron {
-    background-image: url("./assets/cool-background.png");
-    background-color: #cccccc;
-   } 
+.title {
+	position: relative;
+  color: #ffffff;  
+  font-size: 14rem;
+  line-height: 0.9;
+  text-align: left;
+}
+
+.us{
+    padding-left: 200px;
+	opacity:1;
+	position: absolute;
+}
 
    
 button, input {
@@ -72,6 +101,10 @@ input {
 	display: flex;
 }
 
+#mannaverse-container {
+	height:100px;
+	width:400px;
+}
 
 
 
