@@ -35,15 +35,16 @@
 
 .float-container {
     border: 3px solid #fff;
-    padding: 100px;
+    padding: 200px;
 	padding-top: 50px;
+	/* padding-bottom:400px; */
 }
 
 .float-child {
     width: 50%;
     float: left;
-    padding: 5px;
-	padding-right: 150px;
+    padding: 25px;
+	padding-bottom: 10px;
 } 
 
 .title {
@@ -53,11 +54,12 @@
 
 
 
+
 .jumbotron {
     position: relative; 
     align-items: center;
     justify-content: center;
-	
+	height:350px;
 	
 } 
 
@@ -88,6 +90,8 @@
 	opacity:1;
 	position: relative;
 }
+
+
 
    
 button, input {
